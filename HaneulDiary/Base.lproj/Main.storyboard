@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="41" y="-250"/>
         </scene>
-        <!--Calender View Controller-->
+        <!--Calendar View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="CalenderViewController" id="BYZ-38-t0r" customClass="CalenderViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalenderViewController" id="BYZ-38-t0r" customClass="CalendarViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,7 +189,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarCell" id="Tv7-sG-Xhj" customClass="CalendarCell" customModule="HaneulDiary" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CalendarCell" reuseIdentifier="CalendarCell" id="Tv7-sG-Xhj" customClass="CalendarCell" customModule="HaneulDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QRH-Eo-ZwS">
@@ -208,7 +208,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="skyImage" destination="AiS-H6-7W4" id="kvW-Fr-UII"/>
+                                            <outlet property="skyImage" destination="AiS-H6-7W4" id="S8B-mk-2kN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -223,6 +223,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G8k-AB-GLN"/>
+                    <connections>
+                        <outlet property="calendarCollectionView" destination="6bd-zw-BuD" id="spe-hk-Ilo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,17 +12,47 @@ import PhotosUI
 
 class AddFeedViewController: UIViewController,PHPhotoLibraryChangeObserver {
     
+    @IBOutlet weak var diaryContext: UITextField!
+    @IBOutlet weak var backgroundImage: UIImageView!
     var fetchResult = PHFetchResult<PHAsset>()
-    
-    var canAccessImages: [UIImage] = []
     var thumbnailSize: CGSize {
         let scale = UIScreen.main.scale
         return CGSize(width: (UIScreen.main.bounds.width / 3) * scale, height: 100 * scale)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        setStyle()
     }
     
+    private func setStyle(){
+        diaryContext.borderStyle = .none
+        let border = CALayer()
+        border.frame = CGRect(x: 0, y: diaryContext.frame.size.height-1, width: diaryContext.frame.size.width, height: 1)
+        border.backgroundColor = UIColor.white.cgColor
+        diaryContext.layer.addSublayer(border)
+    }
+    @IBAction func addThePhoto(_ sender: Any) {
+        self.requestPHPhotoLibraryAuthorization {
+            self.getImage()
+        }
+    }
+    
+    func getImage(){
+        let requestOptions = PHImageRequestOptions()
+        requestOptions.isSynchronous = true
+
+        let fetchOptions = PHFetchOptions()
+        self.fetchResult = PHAsset.fetchAssets(with: fetchOptions)
+        self.fetchResult.enumerateObjects { (asset, _, _) in
+            PHImageManager().requestImage(for: asset, targetSize: self.thumbnailSize, contentMode: .aspectFill, options: requestOptions) { (image, info) in
+                guard let image = image else { return }
+                DispatchQueue.main.async {
+                    self.backgroundImage.image = image
+                    print(info)
+                }
+            }
+        }
+    }
     func requestPHPhotoLibraryAuthorization(completion: @escaping () -> Void) {
         PHPhotoLibrary.requestAuthorization(for: .readWrite) { (status) in
             switch status {

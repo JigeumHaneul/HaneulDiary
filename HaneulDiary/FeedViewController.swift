@@ -37,7 +37,7 @@ class FeedViewController: UIViewController {
 
 }
 
-extension FeedViewController:UITableViewDelegate{
+extension FeedViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -52,7 +52,7 @@ extension FeedViewController:UITableViewDelegate{
     }
 }
 
-extension FeedViewController:UITableViewDataSource{
+extension FeedViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 500
     }

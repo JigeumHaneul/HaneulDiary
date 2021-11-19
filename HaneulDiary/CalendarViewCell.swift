@@ -8,11 +8,17 @@
 import UIKit
 import SDWebImage
 
-class CalendarCell: UICollectionViewCell {
-    @IBOutlet weak var skyImage: UIImageView!
-
-    func configure(image : URL?){
-        skyImage.sd_setImage(with: image, completed: nil)
-    }
-
-}
+//class CalendarCell: UICollectionViewCell {
+//    @IBOutlet weak var skyImage: UIImageView!
+//
+//    override class func awakeFromNib() {
+//        super.awakeFromNib()
+//    }
+//
+//    func configure(image : URL?){
+//        print(image)
+//        print(skyImage)
+//        self.skyImage.sd_setImage(with: image, completed: nil)
+//    }
+//
+//}

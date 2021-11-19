@@ -63,26 +63,47 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zx3-iI-qBb">
                                 <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUk-od-TVc">
-                                        <rect key="frame" x="184" y="291" width="49" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUk-od-TVc">
+                                        <rect key="frame" x="50" y="50" width="314" height="500"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="500" id="lMq-MK-EyE"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                        <connections>
+                                            <action selector="addThePhoto:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iFC-41-O09"/>
+                                        </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9W-rt-p2S">
-                                        <rect key="frame" x="159" y="390" width="97" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Okz-sQ-7rd">
+                                        <rect key="frame" x="50" y="50" width="314" height="500"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="500" id="ECQ-tU-hGu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PwL-4B-cD1">
+                                        <rect key="frame" x="50" y="600" width="314" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lr-7C-koW">
-                                        <rect key="frame" x="175" y="653" width="49" height="31"/>
+                                        <rect key="frame" x="183" y="729" width="49" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="확인"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Okz-sQ-7rd" firstAttribute="top" secondItem="zx3-iI-qBb" secondAttribute="top" constant="50" id="2tJ-66-xMk"/>
+                                    <constraint firstItem="PwL-4B-cD1" firstAttribute="leading" secondItem="zx3-iI-qBb" secondAttribute="leading" constant="50" id="3kd-AK-mOi"/>
+                                    <constraint firstItem="Okz-sQ-7rd" firstAttribute="leading" secondItem="zx3-iI-qBb" secondAttribute="leading" constant="50" id="7wa-bh-Spv"/>
+                                    <constraint firstItem="PwL-4B-cD1" firstAttribute="top" secondItem="gUk-od-TVc" secondAttribute="bottom" constant="50" id="Nc8-I2-A06"/>
+                                    <constraint firstAttribute="trailing" secondItem="PwL-4B-cD1" secondAttribute="trailing" constant="50" id="dKl-oz-rt4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Okz-sQ-7rd" secondAttribute="trailing" constant="50" id="e70-rF-2df"/>
+                                    <constraint firstItem="gUk-od-TVc" firstAttribute="leading" secondItem="zx3-iI-qBb" secondAttribute="leading" constant="50" id="qXi-AZ-FZY"/>
+                                    <constraint firstAttribute="trailing" secondItem="gUk-od-TVc" secondAttribute="trailing" constant="50" id="ucr-7I-8kJ"/>
+                                    <constraint firstItem="gUk-od-TVc" firstAttribute="top" secondItem="zx3-iI-qBb" secondAttribute="top" constant="50" id="ukU-3c-7R0"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -97,6 +118,10 @@
                             <constraint firstItem="WSG-6X-kSv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="pLc-c6-v6c"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="Okz-sQ-7rd" id="84p-5H-Vim"/>
+                        <outlet property="diaryContext" destination="PwL-4B-cD1" id="irV-T4-5CS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

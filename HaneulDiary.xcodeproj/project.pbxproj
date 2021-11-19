@@ -14,12 +14,13 @@
 		561D5C5F2747C6F80083D9E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C5D2747C6F80083D9E7 /* Main.storyboard */; };
 		561D5C612747C6F90083D9E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C602747C6F90083D9E7 /* Assets.xcassets */; };
 		561D5C642747C6F90083D9E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C622747C6F90083D9E7 /* LaunchScreen.storyboard */; };
-		561D5C6E2747CD910083D9E7 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C6D2747CD910083D9E7 /* CalenderViewController.swift */; };
+		561D5C6E2747CD910083D9E7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C6D2747CD910083D9E7 /* CalendarViewController.swift */; };
 		561D5C702747CDA40083D9E7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C6F2747CDA40083D9E7 /* FeedViewController.swift */; };
 		561D5C742747EEFB0083D9E7 /* DiaryFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C722747EEFB0083D9E7 /* DiaryFeedCell.swift */; };
 		561D5C752747EEFB0083D9E7 /* DiaryFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */; };
 		561D5C81274817DE0083D9E7 /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C80274817DE0083D9E7 /* AddFeedViewController.swift */; };
 		561D5C8427481C670083D9E7 /* AddFeedView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C8327481C670083D9E7 /* AddFeedView.storyboard */; };
+		A807AC2027483E170084B386 /* CalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807AC1F27483E170084B386 /* CalendarViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +33,13 @@
 		561D5C602747C6F90083D9E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561D5C632747C6F90083D9E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		561D5C652747C6F90083D9E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		561D5C6D2747CD910083D9E7 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		561D5C6D2747CD910083D9E7 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		561D5C6F2747CDA40083D9E7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		561D5C722747EEFB0083D9E7 /* DiaryFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryFeedCell.swift; sourceTree = "<group>"; };
 		561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryFeedCell.xib; sourceTree = "<group>"; };
 		561D5C80274817DE0083D9E7 /* AddFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
 		561D5C8327481C670083D9E7 /* AddFeedView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddFeedView.storyboard; sourceTree = "<group>"; };
+		A807AC1F27483E170084B386 /* CalendarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewCell.swift; sourceTree = "<group>"; };
 		CB6360C9F66085703FDDD775 /* Pods-HaneulDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaneulDiary.debug.xcconfig"; path = "Target Support Files/Pods-HaneulDiary/Pods-HaneulDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		D62FF2E5798E4891B0F083A1 /* Pods_HaneulDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaneulDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,7 +92,8 @@
 				561D5C6F2747CDA40083D9E7 /* FeedViewController.swift */,
 				561D5C722747EEFB0083D9E7 /* DiaryFeedCell.swift */,
 				561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */,
-				561D5C6D2747CD910083D9E7 /* CalenderViewController.swift */,
+				561D5C6D2747CD910083D9E7 /* CalendarViewController.swift */,
+				A807AC1F27483E170084B386 /* CalendarViewCell.swift */,
 				561D5C5D2747C6F80083D9E7 /* Main.storyboard */,
 				561D5C602747C6F90083D9E7 /* Assets.xcassets */,
 				561D5C622747C6F90083D9E7 /* LaunchScreen.storyboard */,
@@ -234,8 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				561D5C6E2747CD910083D9E7 /* CalenderViewController.swift in Sources */,
+				561D5C6E2747CD910083D9E7 /* CalendarViewController.swift in Sources */,
 				561D5C5C2747C6F80083D9E7 /* MainViewController.swift in Sources */,
+				A807AC2027483E170084B386 /* CalendarViewCell.swift in Sources */,
 				561D5C702747CDA40083D9E7 /* FeedViewController.swift in Sources */,
 				561D5C81274817DE0083D9E7 /* AddFeedViewController.swift in Sources */,
 				561D5C582747C6F80083D9E7 /* AppDelegate.swift in Sources */,

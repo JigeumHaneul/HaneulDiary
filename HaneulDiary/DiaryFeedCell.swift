@@ -11,6 +11,7 @@ import SDWebImage
 class DiaryFeedCell: UITableViewCell {
     @IBOutlet weak var skyImage: UIImageView!
     @IBOutlet weak var diaryContext: UILabel!
+    @IBOutlet weak var diaryDate: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,16 +29,17 @@ class DiaryFeedCell: UITableViewCell {
     
     
     func setStyle(){
-        skyImage.layer.masksToBounds = false
+        skyImage.layer.masksToBounds = true
         skyImage.layer.shadowRadius = 10
-        skyImage.layer.shadowOffset = .zero
-        skyImage.layer.shadowOpacity = 0.5
-        skyImage.layer.shadowColor = UIColor.black.cgColor
+//        skyImage.layer.shadowOffset = .zero
+//        skyImage.layer.shadowOpacity = 0.5
+//        skyImage.layer.shadowColor = UIColor.black.cgColor
     }
     
-    func configure(image : URL?,context : String){
+    func configure(image : URL?,context : String, date : String){
         skyImage.sd_setImage(with: image, completed: nil)
         diaryContext.text = context
+        diaryDate.text = date
     }
     
 }

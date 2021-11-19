@@ -44,14 +44,14 @@
                     <navigationItem key="navigationItem" id="uh2-lk-JMP"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="modal" id="3Dd-hc-14G"/>
-                        <segue destination="kxj-jE-TPA" kind="modal" id="Nnb-rF-c4m"/>
+                        <segue destination="kxj-jE-TPA" kind="modal" id="J54-ib-1nP"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szg-qa-R5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1116" y="-529"/>
         </scene>
-        <!--오늘의 피드-->
+        <!--Feed View Controller-->
         <scene sceneID="SyU-AQ-GGM">
             <objects>
                 <viewController storyboardIdentifier="FeedViewController" id="kxj-jE-TPA" customClass="FeedViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,8 +59,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TN3-bv-t60">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wtr-Px-kvz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHO-6g-c1P">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="오늘의 피드">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name="NanumPen"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ohY-gw-7td">
+                                                <rect key="frame" x="375" y="0.0" width="39" height="100"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pm3-WV-9I6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="39" height="39"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="39" id="sBC-PM-h0K"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tL0-5E-v6b">
+                                                        <rect key="frame" x="0.0" y="39" width="39" height="22"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="addFeedContext:" destination="kxj-jE-TPA" eventType="touchUpInside" id="c8f-cW-zc7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvi-X3-z0G">
+                                                        <rect key="frame" x="0.0" y="61" width="39" height="39"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="39" id="Uac-RO-502"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="39" id="y9t-2e-OYQ"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="F9l-4z-2fg"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Wtr-Px-kvz" firstAttribute="top" secondItem="TN3-bv-t60" secondAttribute="top" id="MVU-rq-PJL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wtr-Px-kvz" secondAttribute="bottom" id="aeg-AM-knH"/>
+                                    <constraint firstItem="Wtr-Px-kvz" firstAttribute="leading" secondItem="TN3-bv-t60" secondAttribute="leading" id="dp5-y1-JGX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wtr-Px-kvz" secondAttribute="trailing" id="irg-73-wkw"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KaH-da-M8F">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="664"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -68,22 +130,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KaH-da-M8F" firstAttribute="trailing" secondItem="YJW-da-7oc" secondAttribute="trailing" id="5la-tN-Wce"/>
-                            <constraint firstItem="KaH-da-M8F" firstAttribute="top" secondItem="YJW-da-7oc" secondAttribute="top" id="BBN-Kg-JnU"/>
                             <constraint firstItem="KaH-da-M8F" firstAttribute="leading" secondItem="YJW-da-7oc" secondAttribute="leading" id="CWb-5U-kR6"/>
-                            <constraint firstItem="KaH-da-M8F" firstAttribute="top" secondItem="YJW-da-7oc" secondAttribute="top" id="H7U-09-jl6"/>
+                            <constraint firstItem="TN3-bv-t60" firstAttribute="leading" secondItem="YJW-da-7oc" secondAttribute="leading" id="DBh-c5-0km"/>
                             <constraint firstItem="YJW-da-7oc" firstAttribute="bottom" secondItem="KaH-da-M8F" secondAttribute="bottom" id="KbK-Xp-4h4"/>
                             <constraint firstItem="YJW-da-7oc" firstAttribute="trailing" secondItem="KaH-da-M8F" secondAttribute="trailing" id="NAz-Oc-xRi"/>
+                            <constraint firstItem="KaH-da-M8F" firstAttribute="top" secondItem="TN3-bv-t60" secondAttribute="bottom" id="Rg0-zp-rEy"/>
+                            <constraint firstItem="TN3-bv-t60" firstAttribute="top" secondItem="BVF-Oh-fWt" secondAttribute="top" id="UfH-xe-14h"/>
                             <constraint firstItem="KaH-da-M8F" firstAttribute="leading" secondItem="YJW-da-7oc" secondAttribute="leading" id="dgg-oy-yP6"/>
+                            <constraint firstItem="YJW-da-7oc" firstAttribute="trailing" secondItem="TN3-bv-t60" secondAttribute="trailing" id="o36-bO-dIO"/>
+                            <constraint firstItem="KaH-da-M8F" firstAttribute="top" secondItem="TN3-bv-t60" secondAttribute="bottom" id="yxh-ED-IMX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="오늘의 피드" id="UcH-38-KhP"/>
+                    <navigationItem key="navigationItem" id="UcH-38-KhP"/>
                     <connections>
                         <outlet property="feedtableView" destination="KaH-da-M8F" id="NqO-uq-eaG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="511-ll-Oqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41" y="-263"/>
+            <point key="canvasLocation" x="41" y="-250"/>
         </scene>
         <!--Calender View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -118,6 +183,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

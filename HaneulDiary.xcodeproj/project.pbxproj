@@ -18,6 +18,8 @@
 		561D5C702747CDA40083D9E7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C6F2747CDA40083D9E7 /* FeedViewController.swift */; };
 		561D5C742747EEFB0083D9E7 /* DiaryFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C722747EEFB0083D9E7 /* DiaryFeedCell.swift */; };
 		561D5C752747EEFB0083D9E7 /* DiaryFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */; };
+		561D5C81274817DE0083D9E7 /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C80274817DE0083D9E7 /* AddFeedViewController.swift */; };
+		561D5C8427481C670083D9E7 /* AddFeedView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C8327481C670083D9E7 /* AddFeedView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		561D5C6F2747CDA40083D9E7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		561D5C722747EEFB0083D9E7 /* DiaryFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryFeedCell.swift; sourceTree = "<group>"; };
 		561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryFeedCell.xib; sourceTree = "<group>"; };
+		561D5C80274817DE0083D9E7 /* AddFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
+		561D5C8327481C670083D9E7 /* AddFeedView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddFeedView.storyboard; sourceTree = "<group>"; };
 		CB6360C9F66085703FDDD775 /* Pods-HaneulDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaneulDiary.debug.xcconfig"; path = "Target Support Files/Pods-HaneulDiary/Pods-HaneulDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		D62FF2E5798E4891B0F083A1 /* Pods_HaneulDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaneulDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +83,7 @@
 		561D5C562747C6F80083D9E7 /* HaneulDiary */ = {
 			isa = PBXGroup;
 			children = (
+				561D5C82274817F50083D9E7 /* AddFeed */,
 				561D5C572747C6F80083D9E7 /* AppDelegate.swift */,
 				561D5C592747C6F80083D9E7 /* SceneDelegate.swift */,
 				561D5C5B2747C6F80083D9E7 /* MainViewController.swift */,
@@ -94,13 +99,21 @@
 			path = HaneulDiary;
 			sourceTree = "<group>";
 		};
+		561D5C82274817F50083D9E7 /* AddFeed */ = {
+			isa = PBXGroup;
+			children = (
+				561D5C80274817DE0083D9E7 /* AddFeedViewController.swift */,
+				561D5C8327481C670083D9E7 /* AddFeedView.storyboard */,
+			);
+			path = AddFeed;
+			sourceTree = "<group>";
+		};
 		7D4BB0D1C9F4E60515C9F2BD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				CB6360C9F66085703FDDD775 /* Pods-HaneulDiary.debug.xcconfig */,
 				49004A1FD80B049CB9F3E67F /* Pods-HaneulDiary.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -165,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				561D5C642747C6F90083D9E7 /* LaunchScreen.storyboard in Resources */,
+				561D5C8427481C670083D9E7 /* AddFeedView.storyboard in Resources */,
 				561D5C612747C6F90083D9E7 /* Assets.xcassets in Resources */,
 				561D5C5F2747C6F80083D9E7 /* Main.storyboard in Resources */,
 				561D5C752747EEFB0083D9E7 /* DiaryFeedCell.xib in Resources */,
@@ -223,6 +237,7 @@
 				561D5C6E2747CD910083D9E7 /* CalenderViewController.swift in Sources */,
 				561D5C5C2747C6F80083D9E7 /* MainViewController.swift in Sources */,
 				561D5C702747CDA40083D9E7 /* FeedViewController.swift in Sources */,
+				561D5C81274817DE0083D9E7 /* AddFeedViewController.swift in Sources */,
 				561D5C582747C6F80083D9E7 /* AppDelegate.swift in Sources */,
 				561D5C5A2747C6F80083D9E7 /* SceneDelegate.swift in Sources */,
 				561D5C742747EEFB0083D9E7 /* DiaryFeedCell.swift in Sources */,

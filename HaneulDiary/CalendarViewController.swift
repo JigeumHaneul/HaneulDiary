@@ -9,10 +9,13 @@ import UIKit
 
 class CalenderViewController: UIViewController {
 
-   
+    @IBOutlet weak var calenderCollectionView: UICollectionViewCell!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        calenderCollectionView.delegate = self
+        calender
         print("here cal!!!!")
         // Do any additional setup after loading the view.
     }

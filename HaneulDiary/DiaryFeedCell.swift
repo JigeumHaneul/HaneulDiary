@@ -16,7 +16,7 @@ class DiaryFeedCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setStyle()
-        skyImage.layer.cornerRadius = 10
+        
         
         // Initialization code
     }
@@ -30,7 +30,8 @@ class DiaryFeedCell: UITableViewCell {
     
     func setStyle(){
         skyImage.layer.masksToBounds = true
-        skyImage.layer.shadowRadius = 10
+//        skyImage.layer.shadowRadius = 10
+        skyImage.layer.cornerRadius = 10
 //        skyImage.layer.shadowOffset = .zero
 //        skyImage.layer.shadowOpacity = 0.5
 //        skyImage.layer.shadowColor = UIColor.black.cgColor

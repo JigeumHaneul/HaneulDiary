@@ -44,14 +44,14 @@
                     <navigationItem key="navigationItem" id="uh2-lk-JMP"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="modal" id="3Dd-hc-14G"/>
-                        <segue destination="kxj-jE-TPA" kind="modal" id="Nk9-Tl-kad"/>
+                        <segue destination="kxj-jE-TPA" kind="modal" id="Nnb-rF-c4m"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szg-qa-R5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1116" y="-529"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--오늘의 피드-->
         <scene sceneID="SyU-AQ-GGM">
             <objects>
                 <viewController storyboardIdentifier="FeedViewController" id="kxj-jE-TPA" customClass="FeedViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,22 +59,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="두번째 페이지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg2-Of-fWg">
-                                <rect key="frame" x="161" y="378" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KaH-da-M8F">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YJW-da-7oc"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KaH-da-M8F" firstAttribute="trailing" secondItem="YJW-da-7oc" secondAttribute="trailing" id="5la-tN-Wce"/>
+                            <constraint firstItem="KaH-da-M8F" firstAttribute="top" secondItem="YJW-da-7oc" secondAttribute="top" id="BBN-Kg-JnU"/>
+                            <constraint firstItem="KaH-da-M8F" firstAttribute="leading" secondItem="YJW-da-7oc" secondAttribute="leading" id="CWb-5U-kR6"/>
+                            <constraint firstItem="KaH-da-M8F" firstAttribute="top" secondItem="YJW-da-7oc" secondAttribute="top" id="H7U-09-jl6"/>
+                            <constraint firstItem="YJW-da-7oc" firstAttribute="bottom" secondItem="KaH-da-M8F" secondAttribute="bottom" id="KbK-Xp-4h4"/>
+                            <constraint firstItem="YJW-da-7oc" firstAttribute="trailing" secondItem="KaH-da-M8F" secondAttribute="trailing" id="NAz-Oc-xRi"/>
+                            <constraint firstItem="KaH-da-M8F" firstAttribute="leading" secondItem="YJW-da-7oc" secondAttribute="leading" id="dgg-oy-yP6"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="UcH-38-KhP"/>
+                    <navigationItem key="navigationItem" title="오늘의 피드" id="UcH-38-KhP"/>
+                    <connections>
+                        <outlet property="feedtableView" destination="KaH-da-M8F" id="NqO-uq-eaG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="511-ll-Oqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41" y="-318"/>
+            <point key="canvasLocation" x="41" y="-263"/>
         </scene>
         <!--Calender View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -114,9 +123,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

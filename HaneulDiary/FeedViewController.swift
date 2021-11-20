@@ -39,15 +39,16 @@ class FeedViewController: UIViewController {
 
 extension FeedViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return images.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let length = images.count
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DiaryFeedCell", for: indexPath) as? DiaryFeedCell else{
             return DiaryFeedCell()
         }
         
-        cell.configure(image: URL(string: images[indexPath.row]), context: contexts[indexPath.row], date: dates[indexPath.row])
+        cell.configure(image: URL(string: images[length-1-indexPath.row]), context: contexts[length-1-indexPath.row], date: dates[length-1-indexPath.row])
         return cell
     }
 }

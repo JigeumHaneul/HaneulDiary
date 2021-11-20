@@ -1,5 +1,5 @@
 //
-//  FeedViewModel.swift
+//  NewFeedViewModel.swift
 //  HaneulDiary
 //
 //  Created by 도영훈 on 2021/11/20.

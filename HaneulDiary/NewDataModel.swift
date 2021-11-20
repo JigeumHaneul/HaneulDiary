@@ -1,5 +1,5 @@
 //
-//  DataModel.swift
+//  NewDataModel.swift
 //  HaneulDiary
 //
 //  Created by 도영훈 on 2021/11/20.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class FeedDataModeld: NSObject{
+class FeedDataModel : NSObject{
     var image : UIImage?
     var diaryContext : String
     var date : String

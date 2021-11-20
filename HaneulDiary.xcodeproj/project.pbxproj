@@ -20,11 +20,11 @@
 		561D5C752747EEFB0083D9E7 /* DiaryFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */; };
 		561D5C81274817DE0083D9E7 /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C80274817DE0083D9E7 /* AddFeedViewController.swift */; };
 		561D5C8427481C670083D9E7 /* AddFeedView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C8327481C670083D9E7 /* AddFeedView.storyboard */; };
-		561D5C912748C1FA0083D9E7 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C902748C1FA0083D9E7 /* FeedViewModel.swift */; };
-		561D5C932748C2060083D9E7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C922748C2060083D9E7 /* DataModel.swift */; };
 		561D5C952748C5C90083D9E7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C942748C5C90083D9E7 /* FirstViewController.swift */; };
 		561D5C972748C5DA0083D9E7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C962748C5DA0083D9E7 /* SecondViewController.swift */; };
 		561D5C992748C5E30083D9E7 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C982748C5E30083D9E7 /* ThirdViewController.swift */; };
+		561D5C9D2748DB830083D9E7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C9B2748DB830083D9E7 /* DataModel.swift */; };
+		561D5C9E2748DB830083D9E7 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C9C2748DB830083D9E7 /* FeedViewModel.swift */; };
 		A807AC222748ACC40084B386 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807AC212748ACC40084B386 /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,11 +44,11 @@
 		561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryFeedCell.xib; sourceTree = "<group>"; };
 		561D5C80274817DE0083D9E7 /* AddFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
 		561D5C8327481C670083D9E7 /* AddFeedView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddFeedView.storyboard; sourceTree = "<group>"; };
-		561D5C902748C1FA0083D9E7 /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewModel.swift; path = "../../Desktop/마크2/HaneulDiary/FeedViewModel.swift"; sourceTree = "<group>"; };
-		561D5C922748C2060083D9E7 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = "../../Desktop/마크2/HaneulDiary/DataModel.swift"; sourceTree = "<group>"; };
 		561D5C942748C5C90083D9E7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		561D5C962748C5DA0083D9E7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		561D5C982748C5E30083D9E7 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		561D5C9B2748DB830083D9E7 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		561D5C9C2748DB830083D9E7 /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		A807AC212748ACC40084B386 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		CB6360C9F66085703FDDD775 /* Pods-HaneulDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaneulDiary.debug.xcconfig"; path = "Target Support Files/Pods-HaneulDiary/Pods-HaneulDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		D62FF2E5798E4891B0F083A1 /* Pods_HaneulDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaneulDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,11 +100,11 @@
 				561D5C592747C6F80083D9E7 /* SceneDelegate.swift */,
 				561D5C5B2747C6F80083D9E7 /* MainViewController.swift */,
 				561D5C6F2747CDA40083D9E7 /* FeedViewController.swift */,
+				561D5C9B2748DB830083D9E7 /* DataModel.swift */,
+				561D5C9C2748DB830083D9E7 /* FeedViewModel.swift */,
 				561D5C722747EEFB0083D9E7 /* DiaryFeedCell.swift */,
 				561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */,
 				561D5C6D2747CD910083D9E7 /* CalendarViewController.swift */,
-				561D5C902748C1FA0083D9E7 /* FeedViewModel.swift */,
-				561D5C922748C2060083D9E7 /* DataModel.swift */,
 				561D5C5D2747C6F80083D9E7 /* Main.storyboard */,
 				561D5C942748C5C90083D9E7 /* FirstViewController.swift */,
 				561D5C962748C5DA0083D9E7 /* SecondViewController.swift */,
@@ -257,14 +257,14 @@
 				561D5C5C2747C6F80083D9E7 /* MainViewController.swift in Sources */,
 				561D5C702747CDA40083D9E7 /* FeedViewController.swift in Sources */,
 				561D5C81274817DE0083D9E7 /* AddFeedViewController.swift in Sources */,
+				561D5C9D2748DB830083D9E7 /* DataModel.swift in Sources */,
 				561D5C582747C6F80083D9E7 /* AppDelegate.swift in Sources */,
-				561D5C932748C2060083D9E7 /* DataModel.swift in Sources */,
 				561D5C5A2747C6F80083D9E7 /* SceneDelegate.swift in Sources */,
 				A807AC222748ACC40084B386 /* SplashViewController.swift in Sources */,
 				561D5C742747EEFB0083D9E7 /* DiaryFeedCell.swift in Sources */,
-				561D5C912748C1FA0083D9E7 /* FeedViewModel.swift in Sources */,
 				561D5C952748C5C90083D9E7 /* FirstViewController.swift in Sources */,
 				561D5C992748C5E30083D9E7 /* ThirdViewController.swift in Sources */,
+				561D5C9E2748DB830083D9E7 /* FeedViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

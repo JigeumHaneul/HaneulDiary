@@ -63,7 +63,6 @@ class AddFeedViewController: UIViewController,PHPhotoLibraryChangeObserver {
                 DispatchQueue.main.async {
                     self.backgroundImage.image = image
                     self.sendCurrentImage = image
-                    print(info)
                 }
             }
         }

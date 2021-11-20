@@ -17,8 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yd-wL-jRz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNg-uw-fab">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="90"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="CALENDAR"/>
+                                        <connections>
+                                            <action selector="calendarBtn:" destination="u0M-AX-Pvh" eventType="touchUpInside" id="9Ph-oD-cTm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kB-Jn-ee8">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="90"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="FEED"/>
+                                        <connections>
+                                            <action selector="feedBtn:" destination="u0M-AX-Pvh" eventType="touchUpInside" id="8Pf-y8-jZo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="15J-CJ-BBm"/>
+                                </constraints>
+                            </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmH-lg-RVq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="90" width="414" height="772"/>
                                 <connections>
                                     <segue destination="Gxs-y5-Kd1" kind="embed" identifier="MainPageViewControllerSegue" id="bg9-pI-SRw"/>
                                 </connections>
@@ -27,16 +51,23 @@
                         <viewLayoutGuide key="safeArea" id="ycj-7g-Fgp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5yd-wL-jRz" firstAttribute="leading" secondItem="ycj-7g-Fgp" secondAttribute="leading" id="4Ah-bR-EOe"/>
+                            <constraint firstItem="RmH-lg-RVq" firstAttribute="top" secondItem="5yd-wL-jRz" secondAttribute="bottom" id="6FW-bl-Vf7"/>
                             <constraint firstItem="RmH-lg-RVq" firstAttribute="leading" secondItem="ycj-7g-Fgp" secondAttribute="leading" id="CM0-fw-Kyi"/>
+                            <constraint firstItem="5yd-wL-jRz" firstAttribute="top" secondItem="d6f-3I-gkY" secondAttribute="top" id="TpA-r2-HNj"/>
                             <constraint firstItem="ycj-7g-Fgp" firstAttribute="bottom" secondItem="RmH-lg-RVq" secondAttribute="bottom" id="fgh-Eb-zLW"/>
-                            <constraint firstItem="RmH-lg-RVq" firstAttribute="top" secondItem="ycj-7g-Fgp" secondAttribute="top" id="nPT-EY-dFF"/>
                             <constraint firstItem="ycj-7g-Fgp" firstAttribute="trailing" secondItem="RmH-lg-RVq" secondAttribute="trailing" id="p8Y-YX-qw7"/>
+                            <constraint firstItem="ycj-7g-Fgp" firstAttribute="trailing" secondItem="5yd-wL-jRz" secondAttribute="trailing" id="wD7-eb-md5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendarBtn" destination="jNg-uw-fab" id="4mB-VO-uxl"/>
+                        <outlet property="feedBtn" destination="5kB-Jn-ee8" id="fhk-9v-sQY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAK-gu-I2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1891" y="-529"/>
+            <point key="canvasLocation" x="-1891.304347826087" y="-529.01785714285711"/>
         </scene>
         <!--Main Page View Controller-->
         <scene sceneID="cqy-vb-mb5">
@@ -57,7 +88,7 @@
             <objects>
                 <viewController storyboardIdentifier="FeedViewController" id="kxj-jE-TPA" customClass="FeedViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BVF-Oh-fWt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TN3-bv-t60">
@@ -143,7 +174,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KaH-da-M8F">
-                                <rect key="frame" x="0.0" y="100" width="414" height="664"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="618"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -176,11 +207,11 @@
             <objects>
                 <viewController storyboardIdentifier="CalenderViewController" id="BYZ-38-t0r" customClass="CalendarViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6bd-zw-BuD">
-                                <rect key="frame" x="20" y="100" width="374" height="614"/>
+                                <rect key="frame" x="20" y="100" width="374" height="568"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yc3-0w-1mT">
                                     <size key="itemSize" width="128" height="128"/>

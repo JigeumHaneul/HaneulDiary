@@ -90,6 +90,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="확인"/>
+                                        <connections>
+                                            <action selector="saveData:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nE4-EV-qt2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

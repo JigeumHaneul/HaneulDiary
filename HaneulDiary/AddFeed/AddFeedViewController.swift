@@ -31,11 +31,7 @@ class AddFeedViewController: UIViewController,PHPhotoLibraryChangeObserver {
         border.backgroundColor = UIColor.white.cgColor
         diaryContext.layer.addSublayer(border)
     }
-    @IBAction func addThePhoto(_ sender: Any) {
-        self.requestPHPhotoLibraryAuthorization {
-            self.getImage()
-        }
-    }
+    
     
     func getImage(){
         let requestOptions = PHImageRequestOptions()
@@ -53,6 +49,7 @@ class AddFeedViewController: UIViewController,PHPhotoLibraryChangeObserver {
             }
         }
     }
+    
     func requestPHPhotoLibraryAuthorization(completion: @escaping () -> Void) {
         PHPhotoLibrary.requestAuthorization(for: .readWrite) { (status) in
             switch status {
@@ -67,6 +64,17 @@ class AddFeedViewController: UIViewController,PHPhotoLibraryChangeObserver {
     
     func photoLibraryDidChange(_ changeInstance: PHChange) {
         print("oh chage???")
+    }
+    
+    
+    @IBAction func saveData(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+    }
+    
+    @IBAction func addThePhoto(_ sender: Any) {
+        self.requestPHPhotoLibraryAuthorization {
+            self.getImage()
+        }
     }
     
     @IBAction func backBtn(_ sender: Any) {

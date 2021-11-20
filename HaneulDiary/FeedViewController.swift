@@ -7,14 +7,18 @@
 
 import UIKit
 
+protocol AddFeedViewControllerDelegate: AnyObject{
+    func getData(image : UIImage?, diaryContext: String? ,date:String)
+}
 class FeedViewController: UIViewController {
     
-   
+    @IBOutlet weak var addBtn: UIButton!
+    
+    private var viewModel = FeedViewModel()
+    private var observation :NSKeyValueObservation!
    
     @IBOutlet weak var feedTableView: UITableView!
-    let images : [String] = ["https://images.pexels.com/photos/907485/pexels-photo-907485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260","https://mblogthumb-phinf.pstatic.net/MjAxNzAyMDJfMjg5/MDAxNDg1OTk2ODc2Njc0.YLls08aCtZPAMR8GBJ4ktIadCtUzpPeS1jdzBTkt6nUg.W-p_93_51zJ9YvoxTevbSB0WO3YV1F0Qr91XpepRrg0g.JPEG.pho6400/1.jpg?type=w800"]
-    let contexts : [String] = ["수고했어~ 오늘도!!","오늘 하늘 예쁘다! 왕왕 행복하다"]
-    let dates : [String] = ["2021.11.21 05:00pm","2021.11.20 10:30am"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,32 +27,47 @@ class FeedViewController: UIViewController {
         feedTableView.dataSource = self
         feedTableView.delegate = self
         feedTableView.register(UINib(nibName: "DiaryFeedCell", bundle: nil), forCellReuseIdentifier: "DiaryFeedCell")
+        addBtn.tintColor = .gray
 
-        
+        setViewModel()
     }
     
     @IBAction func addFeedContext(_ sender: Any) {
-        let vc = UIStoryboard(name: "AddFeedView", bundle: nil).instantiateViewController(withIdentifier: "AddFeedView")
-        vc.modalPresentationStyle = .overFullScreen
-        self.present(vc, animated: false, completion: nil)
+        if let vc = UIStoryboard(name: "AddFeedView", bundle: nil).instantiateViewController(withIdentifier: "AddFeedView") as? AddFeedViewController {
+            vc.delegate = self
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: false, completion: nil)
+        }
     }
     
-    
+    private func setViewModel(){
+        viewModel.setData()
+        observation = self.viewModel.diaryDatas.observe(\.diaryData, options: .new){_,_ in
+            print("please")
+            self.feedTableView.reloadData()
+        }
+    }
+}
 
+extension FeedViewController : AddFeedViewControllerDelegate{
+    func getData(image : UIImage?, diaryContext: String? ,date:String) {
+        self.viewModel.getData(image: image, diaryContext: diaryContext ?? "", date: date)
+        print(viewModel.diaryDataCount)
+        print("ssibal")
+    }
 }
 
 extension FeedViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return images.count
+        return viewModel.diaryDataCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let length = images.count
+        let length = viewModel.diaryDataCount
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DiaryFeedCell", for: indexPath) as? DiaryFeedCell else{
             return DiaryFeedCell()
         }
-        
-        cell.configure(image: URL(string: images[length-1-indexPath.row]), context: contexts[length-1-indexPath.row], date: dates[length-1-indexPath.row])
+        cell.configure(image: viewModel.diaryDatas.diaryData[length-1-indexPath.row].image, context: viewModel.diaryDatas.diaryData[length-1-indexPath.row].diaryContext, date: viewModel.diaryDatas.diaryData[length-1-indexPath.row].date)
         return cell
     }
 }

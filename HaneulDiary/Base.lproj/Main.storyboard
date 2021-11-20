@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Splash View Controller-->
         <scene sceneID="yNJ-WQ-l5L">
             <objects>
-                <viewController id="z7A-iP-obW" sceneMemberID="viewController">
+                <viewController id="z7A-iP-obW" customClass="SplashViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BLg-3b-zZb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vx6-Dp-1Zd">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <connections>
-                                    <segue destination="dqW-xL-DZt" kind="embed" identifier="splashPageViewcontroller" id="h0n-uC-R72"/>
+                                    <segue destination="dqW-xL-DZt" kind="embed" identifier="SplashPageViewcontroller" id="h0n-uC-R72"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="-5567" y="-511"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Splash Page View Controller-->
         <scene sceneID="kq9-hS-xjp">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="dqW-xL-DZt" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="dqW-xL-DZt" customClass="SplashPageViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="ldL-xh-DH6" kind="modal" id="6Gn-ZJ-4KO"/>
                         <segue destination="JN3-aX-HuV" kind="modal" id="i14-Pc-f6G"/>
@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="-4652" y="-529"/>
         </scene>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="Evk-ql-hzY">
             <objects>
-                <viewController id="ldL-xh-DH6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="ldL-xh-DH6" customClass="FirstViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BIg-hd-LNU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,7 +68,10 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFe-9X-jmF">
-                                <rect key="frame" x="78.5" y="467" width="257.5" height="41"/>
+                                <rect key="frame" x="78.5" y="467" width="257.5" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="OF3-uq-UIx"/>
+                                </constraints>
                                 <string key="text">찰칵! 
 고개를 들어 오늘의 하늘을 찍어보세요.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -88,12 +91,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Avr-lt-E7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3659" y="-1189"/>
+            <point key="canvasLocation" x="-3659.420289855073" y="-1189.2857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="p8Z-6d-3cG">
             <objects>
-                <viewController id="F5h-db-IH4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdViewController" id="F5h-db-IH4" customClass="ThirdViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a1t-ae-6mr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,13 +120,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXh-43-NNm">
-                                <rect key="frame" x="82" y="642" width="250" height="40"/>
+                                <rect key="frame" x="57" y="642" width="300" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="cnc-yL-hVu"/>
+                                    <constraint firstAttribute="width" constant="300" id="89s-XL-HYa"/>
                                     <constraint firstAttribute="height" constant="40" id="uMn-d8-fIc"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="하늘일기 시작하기 ☁️"/>
+                                <connections>
+                                    <action selector="startMain:" destination="F5h-db-IH4" eventType="touchUpInside" id="zgp-4s-qQ3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mht-eQ-Kaa"/>
@@ -142,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="-3659.420289855073" y="15.401785714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="6ja-tX-98R">
             <objects>
-                <viewController id="JN3-aX-HuV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="JN3-aX-HuV" customClass="SecondViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0GU-oY-WJy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,7 +189,7 @@
         <!--Main View Controller-->
         <scene sceneID="AC2-4s-gyH">
             <objects>
-                <viewController id="u0M-AX-Pvh" customClass="MainViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="u0M-AX-Pvh" customClass="MainViewController" customModule="HaneulDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d6f-3I-gkY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -266,29 +272,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="708"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TN3-bv-t60">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TN3-bv-t60">
+                                <rect key="frame" x="0.0" y="10" width="414" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GC-kw-Hfw">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                        <connections>
+                                            <action selector="addFeedContext:" destination="kxj-jE-TPA" eventType="touchUpInside" id="oab-Xa-ci7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3GC-kw-Hfw" secondAttribute="trailing" id="5a3-cE-3zx"/>
+                                    <constraint firstItem="3GC-kw-Hfw" firstAttribute="top" secondItem="TN3-bv-t60" secondAttribute="top" id="alQ-ZS-nu8"/>
+                                    <constraint firstItem="3GC-kw-Hfw" firstAttribute="leading" secondItem="TN3-bv-t60" secondAttribute="leading" id="djE-Kw-hKs"/>
+                                    <constraint firstAttribute="bottom" secondItem="3GC-kw-Hfw" secondAttribute="bottom" id="ex4-fT-SV4"/>
+                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KaH-da-M8F">
-                                <rect key="frame" x="0.0" y="40" width="414" height="668"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="652"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YJW-da-7oc"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TN3-bv-t60" firstAttribute="top" secondItem="YJW-da-7oc" secondAttribute="top" constant="10" id="AJ3-9Z-lSb"/>
                             <constraint firstItem="TN3-bv-t60" firstAttribute="leading" secondItem="YJW-da-7oc" secondAttribute="leading" id="DBh-c5-0km"/>
                             <constraint firstItem="YJW-da-7oc" firstAttribute="bottom" secondItem="KaH-da-M8F" secondAttribute="bottom" id="KbK-Xp-4h4"/>
                             <constraint firstItem="YJW-da-7oc" firstAttribute="trailing" secondItem="KaH-da-M8F" secondAttribute="trailing" id="NAz-Oc-xRi"/>
-                            <constraint firstItem="KaH-da-M8F" firstAttribute="top" secondItem="YJW-da-7oc" secondAttribute="top" constant="40" id="QEh-Q1-U3w"/>
-                            <constraint firstItem="TN3-bv-t60" firstAttribute="top" secondItem="BVF-Oh-fWt" secondAttribute="top" id="UfH-xe-14h"/>
                             <constraint firstItem="KaH-da-M8F" firstAttribute="leading" secondItem="YJW-da-7oc" secondAttribute="leading" id="dgg-oy-yP6"/>
+                            <constraint firstItem="KaH-da-M8F" firstAttribute="top" secondItem="TN3-bv-t60" secondAttribute="bottom" constant="15" id="mLx-YM-sOI"/>
                             <constraint firstItem="YJW-da-7oc" firstAttribute="trailing" secondItem="TN3-bv-t60" secondAttribute="trailing" id="o36-bO-dIO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UcH-38-KhP"/>
                     <connections>
+                        <outlet property="addBtn" destination="3GC-kw-Hfw" id="dyd-iB-hVH"/>
                         <outlet property="feedTableView" destination="KaH-da-M8F" id="NqO-uq-eaG"/>
                     </connections>
                 </viewController>
@@ -368,6 +391,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="splash1" width="400" height="300"/>
         <image name="splash2" width="400" height="300"/>
         <image name="splash3" width="400" height="300"/>

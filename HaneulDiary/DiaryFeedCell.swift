@@ -37,8 +37,8 @@ class DiaryFeedCell: UITableViewCell {
 //        skyImage.layer.shadowColor = UIColor.black.cgColor
     }
     
-    func configure(image : URL?,context : String, date : String){
-        skyImage.sd_setImage(with: image, completed: nil)
+    func configure(image : UIImage?,context : String, date : String){
+        skyImage.image = image
         diaryContext.text = context
         diaryDate.text = date
     }

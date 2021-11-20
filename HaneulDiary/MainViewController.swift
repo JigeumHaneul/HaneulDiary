@@ -19,15 +19,15 @@ class MainViewController: UIViewController {
                 if currentIndex == 0{
                     //여기가 백그라운드 색과 버튼 글자 색 바꾸는 코드
                     calendarBtn.backgroundColor = .white
-                    calendarBtn.titleLabel?.tintColor = .blue
-                    feedBtn.backgroundColor = .lightGray
+                    calendarBtn.titleLabel?.tintColor = UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1.0)
+                    feedBtn.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1.0)
                     feedBtn.titleLabel?.tintColor = .white
                 }
                 else{
                     //여기도 마찬가지
                     feedBtn.backgroundColor = .white
-                    feedBtn.titleLabel?.tintColor = .blue
-                    calendarBtn.backgroundColor = .lightGray
+                    feedBtn.titleLabel?.tintColor = UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1.0)
+                    calendarBtn.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1.0)
                     calendarBtn.titleLabel?.tintColor = .white
                 }
             }
@@ -54,7 +54,8 @@ class MainViewController: UIViewController {
     
     private func setHeaderView(){
         calendarBtn.backgroundColor = .white
-        feedBtn.backgroundColor = .lightGray
+        calendarBtn.titleLabel?.tintColor =  UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1.0)
+        feedBtn.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1.0)
         feedBtn.titleLabel?.tintColor = .white
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u0M-AX-Pvh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z7A-iP-obW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -9,6 +9,177 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="yNJ-WQ-l5L">
+            <objects>
+                <viewController id="z7A-iP-obW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BLg-3b-zZb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vx6-Dp-1Zd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <segue destination="dqW-xL-DZt" kind="embed" identifier="splashPageViewcontroller" id="h0n-uC-R72"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E3c-6m-f5S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E3c-6m-f5S" firstAttribute="trailing" secondItem="Vx6-Dp-1Zd" secondAttribute="trailing" id="62t-1r-sj4"/>
+                            <constraint firstItem="Vx6-Dp-1Zd" firstAttribute="leading" secondItem="E3c-6m-f5S" secondAttribute="leading" id="6hQ-ge-t7i"/>
+                            <constraint firstItem="E3c-6m-f5S" firstAttribute="bottom" secondItem="Vx6-Dp-1Zd" secondAttribute="bottom" id="CrQ-II-Bvt"/>
+                            <constraint firstItem="Vx6-Dp-1Zd" firstAttribute="top" secondItem="E3c-6m-f5S" secondAttribute="top" id="UOx-TC-Zwr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrM-53-6aY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5567" y="-511"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="kq9-hS-xjp">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="dqW-xL-DZt" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="ldL-xh-DH6" kind="modal" id="6Gn-ZJ-4KO"/>
+                        <segue destination="JN3-aX-HuV" kind="modal" id="i14-Pc-f6G"/>
+                        <segue destination="F5h-db-IH4" kind="modal" id="Gda-lU-NbP"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISE-as-PXl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4652" y="-529"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Evk-ql-hzY">
+            <objects>
+                <viewController id="ldL-xh-DH6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BIg-hd-LNU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash1" translatesAutoresizingMaskIntoConstraints="NO" id="MZt-mI-Axa">
+                                <rect key="frame" x="82" y="262" width="250" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="MPN-ha-BF6"/>
+                                    <constraint firstAttribute="height" constant="180" id="rIx-n9-roc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFe-9X-jmF">
+                                <rect key="frame" x="78.5" y="467" width="257.5" height="41"/>
+                                <string key="text">찰칵! 
+고개를 들어 오늘의 하늘을 찍어보세요.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DhY-wN-nBm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MZt-mI-Axa" firstAttribute="centerX" secondItem="BIg-hd-LNU" secondAttribute="centerX" id="6gs-kS-dCO"/>
+                            <constraint firstItem="tFe-9X-jmF" firstAttribute="centerX" secondItem="BIg-hd-LNU" secondAttribute="centerX" id="PfK-D8-EKf"/>
+                            <constraint firstItem="MZt-mI-Axa" firstAttribute="centerY" secondItem="BIg-hd-LNU" secondAttribute="centerY" constant="-30" id="beP-Kj-rh3"/>
+                            <constraint firstItem="tFe-9X-jmF" firstAttribute="top" secondItem="MZt-mI-Axa" secondAttribute="bottom" constant="25" id="jfJ-lX-jqM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Avr-lt-E7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3659" y="-1189"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="p8Z-6d-3cG">
+            <objects>
+                <viewController id="F5h-db-IH4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a1t-ae-6mr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash3" translatesAutoresizingMaskIntoConstraints="NO" id="Ktl-Dz-5PG">
+                                <rect key="frame" x="82" y="262" width="250" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="58S-Ro-zcW"/>
+                                    <constraint firstAttribute="height" constant="180" id="qVN-ME-940"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKR-79-KFT">
+                                <rect key="frame" x="82" y="467" width="250" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Bd8-je-1FN"/>
+                                </constraints>
+                                <string key="text">늘 당신 주변에 머무는 하늘이 
+당신의 추억도 지켜줄거랍니다 :)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXh-43-NNm">
+                                <rect key="frame" x="82" y="642" width="250" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="cnc-yL-hVu"/>
+                                    <constraint firstAttribute="height" constant="40" id="uMn-d8-fIc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="하늘일기 시작하기 ☁️"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mht-eQ-Kaa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GKR-79-KFT" firstAttribute="centerX" secondItem="a1t-ae-6mr" secondAttribute="centerX" id="4lj-87-bko"/>
+                            <constraint firstItem="Ktl-Dz-5PG" firstAttribute="centerY" secondItem="a1t-ae-6mr" secondAttribute="centerY" constant="-30" id="DFB-2V-dLf"/>
+                            <constraint firstItem="mXh-43-NNm" firstAttribute="centerY" secondItem="a1t-ae-6mr" secondAttribute="centerY" constant="280" id="H3X-pE-XYy"/>
+                            <constraint firstItem="Ktl-Dz-5PG" firstAttribute="centerX" secondItem="a1t-ae-6mr" secondAttribute="centerX" id="VYe-n9-Fio"/>
+                            <constraint firstItem="GKR-79-KFT" firstAttribute="top" secondItem="Ktl-Dz-5PG" secondAttribute="bottom" constant="25" id="ahp-Ab-UyK"/>
+                            <constraint firstItem="mXh-43-NNm" firstAttribute="centerX" secondItem="a1t-ae-6mr" secondAttribute="centerX" id="m8a-Jm-BVl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Gg-NT-hJY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3659.420289855073" y="15.401785714285714"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6ja-tX-98R">
+            <objects>
+                <viewController id="JN3-aX-HuV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0GU-oY-WJy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash2" translatesAutoresizingMaskIntoConstraints="NO" id="kae-aO-FdG">
+                                <rect key="frame" x="82" y="262" width="250" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="UU5-Go-mGf"/>
+                                    <constraint firstAttribute="width" constant="250" id="pRe-ff-z5s"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKo-XG-qXt">
+                                <rect key="frame" x="102.5" y="467" width="209" height="41"/>
+                                <string key="text">그 위에 
+오늘의 이야기를 기록해 보세요.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Guq-bB-WAV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JKo-XG-qXt" firstAttribute="centerX" secondItem="0GU-oY-WJy" secondAttribute="centerX" id="19m-cF-4zb"/>
+                            <constraint firstItem="kae-aO-FdG" firstAttribute="centerX" secondItem="0GU-oY-WJy" secondAttribute="centerX" id="8Nq-BH-VLf"/>
+                            <constraint firstItem="kae-aO-FdG" firstAttribute="centerY" secondItem="0GU-oY-WJy" secondAttribute="centerY" constant="-30" id="sdE-qm-VYU"/>
+                            <constraint firstItem="JKo-XG-qXt" firstAttribute="top" secondItem="kae-aO-FdG" secondAttribute="bottom" constant="25" id="szv-nN-GNI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIE-mo-D7m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3659" y="-585"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="AC2-4s-gyH">
             <objects>
@@ -197,6 +368,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="splash1" width="400" height="300"/>
+        <image name="splash2" width="400" height="300"/>
+        <image name="splash3" width="400" height="300"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

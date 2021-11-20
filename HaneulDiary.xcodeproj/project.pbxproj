@@ -20,6 +20,7 @@
 		561D5C752747EEFB0083D9E7 /* DiaryFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */; };
 		561D5C81274817DE0083D9E7 /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C80274817DE0083D9E7 /* AddFeedViewController.swift */; };
 		561D5C8427481C670083D9E7 /* AddFeedView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C8327481C670083D9E7 /* AddFeedView.storyboard */; };
+		A807AC222748ACC40084B386 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807AC212748ACC40084B386 /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryFeedCell.xib; sourceTree = "<group>"; };
 		561D5C80274817DE0083D9E7 /* AddFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
 		561D5C8327481C670083D9E7 /* AddFeedView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddFeedView.storyboard; sourceTree = "<group>"; };
+		A807AC212748ACC40084B386 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		CB6360C9F66085703FDDD775 /* Pods-HaneulDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaneulDiary.debug.xcconfig"; path = "Target Support Files/Pods-HaneulDiary/Pods-HaneulDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		D62FF2E5798E4891B0F083A1 /* Pods_HaneulDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaneulDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 				561D5C6D2747CD910083D9E7 /* CalendarViewController.swift */,
 				561D5C5D2747C6F80083D9E7 /* Main.storyboard */,
 				561D5C602747C6F90083D9E7 /* Assets.xcassets */,
+				A807AC212748ACC40084B386 /* SplashViewController.swift */,
 				561D5C622747C6F90083D9E7 /* LaunchScreen.storyboard */,
 				561D5C652747C6F90083D9E7 /* Info.plist */,
 			);
@@ -240,6 +243,7 @@
 				561D5C81274817DE0083D9E7 /* AddFeedViewController.swift in Sources */,
 				561D5C582747C6F80083D9E7 /* AppDelegate.swift in Sources */,
 				561D5C5A2747C6F80083D9E7 /* SceneDelegate.swift in Sources */,
+				A807AC222748ACC40084B386 /* SplashViewController.swift in Sources */,
 				561D5C742747EEFB0083D9E7 /* DiaryFeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

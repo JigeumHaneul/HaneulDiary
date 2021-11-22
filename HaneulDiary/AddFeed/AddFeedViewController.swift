@@ -51,6 +51,10 @@ class AddFeedViewController: UIViewController,PHPhotoLibraryChangeObserver {
        print(sender.date)
    }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func getImage(){
         let requestOptions = PHImageRequestOptions()
         requestOptions.isSynchronous = true

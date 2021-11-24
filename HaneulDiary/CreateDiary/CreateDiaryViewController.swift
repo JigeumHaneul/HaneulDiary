@@ -10,7 +10,7 @@ import Combine
 import Photos
 import PhotosUI
 
-class AddFeedViewController: UIViewController,PHPhotoLibraryChangeObserver {
+class CreateDiaryViewController: UIViewController,PHPhotoLibraryChangeObserver {
     
     var sendCurrentImage : UIImage?
     var sendDairyContext : String?
@@ -36,7 +36,6 @@ class AddFeedViewController: UIViewController,PHPhotoLibraryChangeObserver {
         border.frame = CGRect(x: 0, y: diaryContext.frame.size.height-1, width: diaryContext.frame.size.width, height: 1)
         border.backgroundColor = UIColor.black.cgColor
         diaryContext.layer.addSublayer(border)
-//        datePicker.preferredDatePickerStyle = .automatic
         datePicker.datePickerMode = .dateAndTime
         datePicker.locale = Locale(identifier: "ko-KR")
         datePicker.timeZone = .autoupdatingCurrent

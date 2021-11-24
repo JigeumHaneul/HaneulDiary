@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Combine
 
 class DiaryFeedCell: UITableViewCell {
     @IBOutlet weak var skyImage: UIImageView!
@@ -21,20 +21,12 @@ class DiaryFeedCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
+    
     
     
     func setStyle(){
         skyImage.layer.masksToBounds = true
-//        skyImage.layer.shadowRadius = 10
         skyImage.layer.cornerRadius = 10
-//        skyImage.layer.shadowOffset = .zero
-//        skyImage.layer.shadowOpacity = 0.5
-//        skyImage.layer.shadowColor = UIColor.black.cgColor
     }
     
     func configure(image : UIImage?,context : String, date : String){

@@ -8,6 +8,9 @@
 import UIKit
 import SDWebImage
 
+//모델(데이터 모델) 뷰모델 뷰 나누는 작업
+
+
 class CalendarViewController: UIViewController {
 
     @IBOutlet weak var calendarCollectionView: UICollectionView!

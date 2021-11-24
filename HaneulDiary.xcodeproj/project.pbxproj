@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		100F560B328D096183B5CE03 /* Pods_HaneulDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62FF2E5798E4891B0F083A1 /* Pods_HaneulDiary.framework */; };
-		5615E7772748DCB200BF57B9 /* NewFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615E7762748DCB200BF57B9 /* NewFeedViewModel.swift */; };
-		5615E7792748DCE200BF57B9 /* NewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615E7782748DCE200BF57B9 /* NewDataModel.swift */; };
+		5615E7772748DCB200BF57B9 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615E7762748DCB200BF57B9 /* FeedViewModel.swift */; };
+		5615E7792748DCE200BF57B9 /* DiaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5615E7782748DCE200BF57B9 /* DiaryDataModel.swift */; };
 		561D5C582747C6F80083D9E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C572747C6F80083D9E7 /* AppDelegate.swift */; };
 		561D5C5A2747C6F80083D9E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C592747C6F80083D9E7 /* SceneDelegate.swift */; };
 		561D5C5C2747C6F80083D9E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C5B2747C6F80083D9E7 /* MainViewController.swift */; };
@@ -20,18 +20,19 @@
 		561D5C702747CDA40083D9E7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C6F2747CDA40083D9E7 /* FeedViewController.swift */; };
 		561D5C742747EEFB0083D9E7 /* DiaryFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C722747EEFB0083D9E7 /* DiaryFeedCell.swift */; };
 		561D5C752747EEFB0083D9E7 /* DiaryFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */; };
-		561D5C81274817DE0083D9E7 /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C80274817DE0083D9E7 /* AddFeedViewController.swift */; };
-		561D5C8427481C670083D9E7 /* AddFeedView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C8327481C670083D9E7 /* AddFeedView.storyboard */; };
+		561D5C81274817DE0083D9E7 /* CreateDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C80274817DE0083D9E7 /* CreateDiaryViewController.swift */; };
+		561D5C8427481C670083D9E7 /* CreateDiary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561D5C8327481C670083D9E7 /* CreateDiary.storyboard */; };
 		561D5C952748C5C90083D9E7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C942748C5C90083D9E7 /* FirstViewController.swift */; };
 		561D5C972748C5DA0083D9E7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C962748C5DA0083D9E7 /* SecondViewController.swift */; };
 		561D5C992748C5E30083D9E7 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D5C982748C5E30083D9E7 /* ThirdViewController.swift */; };
+		5628BF81274E2B6200352175 /* DiaryFeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5628BF80274E2B6200352175 /* DiaryFeedCellViewModel.swift */; };
 		A807AC222748ACC40084B386 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A807AC212748ACC40084B386 /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49004A1FD80B049CB9F3E67F /* Pods-HaneulDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaneulDiary.release.xcconfig"; path = "Target Support Files/Pods-HaneulDiary/Pods-HaneulDiary.release.xcconfig"; sourceTree = "<group>"; };
-		5615E7762748DCB200BF57B9 /* NewFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedViewModel.swift; sourceTree = "<group>"; };
-		5615E7782748DCE200BF57B9 /* NewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDataModel.swift; sourceTree = "<group>"; };
+		5615E7762748DCB200BF57B9 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		5615E7782748DCE200BF57B9 /* DiaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataModel.swift; sourceTree = "<group>"; };
 		561D5C542747C6F80083D9E7 /* HaneulDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaneulDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561D5C572747C6F80083D9E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		561D5C592747C6F80083D9E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,11 +45,12 @@
 		561D5C6F2747CDA40083D9E7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		561D5C722747EEFB0083D9E7 /* DiaryFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryFeedCell.swift; sourceTree = "<group>"; };
 		561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryFeedCell.xib; sourceTree = "<group>"; };
-		561D5C80274817DE0083D9E7 /* AddFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
-		561D5C8327481C670083D9E7 /* AddFeedView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddFeedView.storyboard; sourceTree = "<group>"; };
+		561D5C80274817DE0083D9E7 /* CreateDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryViewController.swift; sourceTree = "<group>"; };
+		561D5C8327481C670083D9E7 /* CreateDiary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateDiary.storyboard; sourceTree = "<group>"; };
 		561D5C942748C5C90083D9E7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		561D5C962748C5DA0083D9E7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		561D5C982748C5E30083D9E7 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		5628BF80274E2B6200352175 /* DiaryFeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryFeedCellViewModel.swift; sourceTree = "<group>"; };
 		A807AC212748ACC40084B386 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		CB6360C9F66085703FDDD775 /* Pods-HaneulDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaneulDiary.debug.xcconfig"; path = "Target Support Files/Pods-HaneulDiary/Pods-HaneulDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		D62FF2E5798E4891B0F083A1 /* Pods_HaneulDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaneulDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,15 +97,12 @@
 		561D5C562747C6F80083D9E7 /* HaneulDiary */ = {
 			isa = PBXGroup;
 			children = (
-				561D5C82274817F50083D9E7 /* AddFeed */,
+				5628BF79274E27EC00352175 /* Feed */,
+				561D5C82274817F50083D9E7 /* CreateDiary */,
 				561D5C572747C6F80083D9E7 /* AppDelegate.swift */,
 				561D5C592747C6F80083D9E7 /* SceneDelegate.swift */,
 				561D5C5B2747C6F80083D9E7 /* MainViewController.swift */,
-				561D5C6F2747CDA40083D9E7 /* FeedViewController.swift */,
-				5615E7782748DCE200BF57B9 /* NewDataModel.swift */,
-				5615E7762748DCB200BF57B9 /* NewFeedViewModel.swift */,
-				561D5C722747EEFB0083D9E7 /* DiaryFeedCell.swift */,
-				561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */,
+				5615E7782748DCE200BF57B9 /* DiaryDataModel.swift */,
 				561D5C6D2747CD910083D9E7 /* CalendarViewController.swift */,
 				561D5C5D2747C6F80083D9E7 /* Main.storyboard */,
 				561D5C942748C5C90083D9E7 /* FirstViewController.swift */,
@@ -117,13 +116,65 @@
 			path = HaneulDiary;
 			sourceTree = "<group>";
 		};
-		561D5C82274817F50083D9E7 /* AddFeed */ = {
+		561D5C82274817F50083D9E7 /* CreateDiary */ = {
 			isa = PBXGroup;
 			children = (
-				561D5C80274817DE0083D9E7 /* AddFeedViewController.swift */,
-				561D5C8327481C670083D9E7 /* AddFeedView.storyboard */,
+				561D5C80274817DE0083D9E7 /* CreateDiaryViewController.swift */,
+				561D5C8327481C670083D9E7 /* CreateDiary.storyboard */,
 			);
-			path = AddFeed;
+			path = CreateDiary;
+			sourceTree = "<group>";
+		};
+		5628BF79274E27EC00352175 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				5628BF7C274E28C400352175 /* Cell */,
+				5628BF7B274E280200352175 /* ViewModel */,
+				5628BF7A274E27FC00352175 /* View */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		5628BF7A274E27FC00352175 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				561D5C6F2747CDA40083D9E7 /* FeedViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5628BF7B274E280200352175 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5615E7762748DCB200BF57B9 /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5628BF7C274E28C400352175 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5628BF7E274E28DA00352175 /* View */,
+				5628BF7D274E28D200352175 /* ViewModel */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5628BF7D274E28D200352175 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5628BF80274E2B6200352175 /* DiaryFeedCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5628BF7E274E28DA00352175 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				561D5C722747EEFB0083D9E7 /* DiaryFeedCell.swift */,
+				561D5C732747EEFB0083D9E7 /* DiaryFeedCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7D4BB0D1C9F4E60515C9F2BD /* Pods */ = {
@@ -196,7 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				561D5C642747C6F90083D9E7 /* LaunchScreen.storyboard in Resources */,
-				561D5C8427481C670083D9E7 /* AddFeedView.storyboard in Resources */,
+				561D5C8427481C670083D9E7 /* CreateDiary.storyboard in Resources */,
 				561D5C612747C6F90083D9E7 /* Assets.xcassets in Resources */,
 				561D5C5F2747C6F80083D9E7 /* Main.storyboard in Resources */,
 				561D5C752747EEFB0083D9E7 /* DiaryFeedCell.xib in Resources */,
@@ -252,18 +303,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5615E7792748DCE200BF57B9 /* NewDataModel.swift in Sources */,
+				5615E7792748DCE200BF57B9 /* DiaryDataModel.swift in Sources */,
 				561D5C972748C5DA0083D9E7 /* SecondViewController.swift in Sources */,
 				561D5C6E2747CD910083D9E7 /* CalendarViewController.swift in Sources */,
 				561D5C5C2747C6F80083D9E7 /* MainViewController.swift in Sources */,
 				561D5C702747CDA40083D9E7 /* FeedViewController.swift in Sources */,
-				561D5C81274817DE0083D9E7 /* AddFeedViewController.swift in Sources */,
+				561D5C81274817DE0083D9E7 /* CreateDiaryViewController.swift in Sources */,
 				561D5C582747C6F80083D9E7 /* AppDelegate.swift in Sources */,
 				561D5C5A2747C6F80083D9E7 /* SceneDelegate.swift in Sources */,
+				5628BF81274E2B6200352175 /* DiaryFeedCellViewModel.swift in Sources */,
 				A807AC222748ACC40084B386 /* SplashViewController.swift in Sources */,
 				561D5C742747EEFB0083D9E7 /* DiaryFeedCell.swift in Sources */,
 				561D5C952748C5C90083D9E7 /* FirstViewController.swift in Sources */,
-				5615E7772748DCB200BF57B9 /* NewFeedViewModel.swift in Sources */,
+				5615E7772748DCB200BF57B9 /* FeedViewModel.swift in Sources */,
 				561D5C992748C5E30083D9E7 /* ThirdViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

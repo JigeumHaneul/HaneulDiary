@@ -33,7 +33,7 @@ class FeedViewController: UIViewController {
     }
     
     @IBAction func addFeedContext(_ sender: Any) {
-        if let vc = UIStoryboard(name: "AddFeedView", bundle: nil).instantiateViewController(withIdentifier: "AddFeedView") as? AddFeedViewController {
+        if let vc = UIStoryboard(name: "CreateDiary", bundle: nil).instantiateViewController(withIdentifier: "CreateDiary") as? CreateDiaryViewController {
             vc.delegate = self
             vc.modalPresentationStyle = .overFullScreen
             self.present(vc, animated: false, completion: nil)
@@ -58,6 +58,7 @@ extension FeedViewController : AddFeedViewControllerDelegate{
 }
 
 extension FeedViewController:UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.diaryDataCount
     }
@@ -67,7 +68,7 @@ extension FeedViewController:UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DiaryFeedCell", for: indexPath) as? DiaryFeedCell else{
             return DiaryFeedCell()
         }
-        cell.configure(image: viewModel.diaryDatas.diaryData[length-1-indexPath.row].image, context: viewModel.diaryDatas.diaryData[length-1-indexPath.row].diaryContext, date: viewModel.diaryDatas.diaryData[length-1-indexPath.row].date)
+        cell.configure(image: viewModel.diaryDatas.diaryData[length-1-indexPath.row].diaryImage, context: viewModel.diaryDatas.diaryData[length-1-indexPath.row].diaryText, date: viewModel.diaryDatas.diaryData[length-1-indexPath.row].diaryDate)
         return cell
     }
 }

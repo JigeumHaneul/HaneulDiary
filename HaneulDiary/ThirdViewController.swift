@@ -19,7 +19,6 @@ class ThirdViewController: UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController")
             vc.modalPresentationStyle = .overFullScreen
             self.present(vc, animated: false, completion: nil)
-        
     }
     
     /*
